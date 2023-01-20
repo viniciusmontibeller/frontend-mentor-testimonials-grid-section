@@ -1,0 +1,143 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--neutral-soft);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container{
+    margin: 6rem 2rem;
+    display: grid;
+    grid-gap: 2.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    "daniel"
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira"
+    ;
+}
+
+.container .card{
+    border-radius: 0.5rem;
+    padding: 2.4rem 3.2rem 3.3rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem var(--primary-medium);
+}
+
+.container .card .profile-info img{
+    height: 2.8rem;
+    border-radius: 50%;
+}
+
+.container .daniel .profile-info img, .container .patrick .profile-info img{
+    height: 3.2rem;
+    border: 0.2rem solid #a775f1;
+}
+
+.container .profile-info{
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    margin-bottom: 1.6rem;
+}
+
+.container .profile-info .name{
+    font-size: 1.3rem;
+    margin-bottom: 0.1rem;
+}
+
+.container .profile-info span{
+    font-size: 1.1rem;
+    opacity: 50%;
+}
+
+.container .card .report{
+    margin-bottom: 1.5rem;
+    
+}
+
+.container .card .review{
+    font-size: 1.3rem;
+    opacity: 70%;
+    line-height: 1.8rem;
+}
+
+.container .daniel{
+    grid-area: daniel;
+    background-color: var(--primary-soft);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 8rem;
+}
+
+.container .jonathan{
+    background-color: var(--primary-medium);
+    grid-area: jonathan;
+}
+
+.container .jeanette{
+    background-color: var(--primary-white);
+    grid-area: jeanette;
+}
+
+.container .patrick{
+    background-color: var(--primary-dark);
+    grid-area: patrick;
+}
+
+.container .kira{
+    background-color: var(--primary-white);
+    grid-area: kira;
+}
+
+.container .daniel, .container .jonathan, .container .patrick{
+    color: var(--primary-white);
+}
+
+@media(min-width: 550px){
+
+    .container{
+        margin: 6rem 4rem;
+        grid-template-areas:
+        "daniel daniel" 
+        "jonathan jeanette"
+        "patrick patrick"
+        "kira kira"; 
+    }
+
+}
+
+@media(min-width: 800px){
+
+    .container{
+        grid-template-areas:
+        "daniel daniel jonathan" 
+        "kira kira kira"
+        " jeanette patrick patrick"
+        ; 
+    }
+
+}
+
+@media(min-width: 1100px){
+
+    .container{
+        grid-template-areas:
+        "daniel daniel jonathan kira" 
+        "jeanette patrick patrick kira"   
+        ;
+        grid-template-columns: repeat(4, minmax(auto, 25.5rem));
+    }
+
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+    .attribution a { color: hsl(228, 45%, 44%); }
